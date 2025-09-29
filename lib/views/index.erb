@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr" data-bs-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Gossip Project</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <title>The Gossip Project</title>
     </head>
     <body class="text-center">
         <h1>Bienvenue sur The Gossip Project !</h1>
-    <h2>Voici la liste des potins :</h2>
-    <% gossips.each_with_index do |gossip, index| %>
-        <p>
-        <strong><%= index + 1 %>.</strong> 
-        <a href="/gossips/<%= index + 1 %>/">Voir le potin</a>
-        </p>
-    <% end %>
+        <h2>Voici la liste des potins :</h2>
+            <% gossips.each_with_index do |gossip, index| %>
+            <p><%= index + 1 %>.<a href="/gossips/<%= index + 1 %>/">Voir le potin</a></p>
+            <% end %>
         <p>En attendant, tu peux <a href="/gossips/new/">créer un nouveau potin</a> !</p>
     </body>
 </html>
