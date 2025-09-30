@@ -22,3 +22,4 @@ class ApplicationController < Sinatra::Base
     end
 end
 
+#rackup -p 4567

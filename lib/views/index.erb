@@ -9,9 +9,10 @@
     <body class="text-center">
         <h1>Bienvenue sur The Gossip Project !</h1>
         <h2>Voici la liste des potins :</h2>
-            <% gossips.each_with_index do |gossip, index| %>
-            <p><%= index + 1 %>.<a href="/gossips/<%= index + 1 %>/">Voir le potin</a></p>
-            <% end %>
+        <% gossips.each.with_index(1) do |gossip, numero| %><p>
+        <strong><%= numero %>.</strong> 
+        <a href="/gossips/<%= numero %>/">Voir le potin</a></p>
+    <% end %>
         <p>En attendant, tu peux <a href="/gossips/new/">créer un nouveau potin</a> !</p>
     </body>
 </html>
